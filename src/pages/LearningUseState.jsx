@@ -5,35 +5,42 @@ const LearningUseState = () => {
   let [counter, setCounter] = useState(0);
 
   function increase() {
-    setCounter(counter++);
+    setCounter(counter + 1);
   }
 
   function decrease() {
-    while(counter >=0){
-        setCounter(counter--);
+    if (counter != 0) {
+      setCounter(counter - 1);
     }
   }
 
   return (
     <div>
-      <h1>Learning useState</h1>
+      <h1 className="flex justify-center text-3xl m-8">Learning useState</h1>
 
-      <button class="inline-block px-7 py-1.5 overflow-hidden text-sm font-semibold transition-transform rounded-full group text text-green-700/70 bg-green-300/30 hover:bg-green-500/70 hover:text-white">
-        Count {counter} 
-      </button>
-      <button
-        onClick={increase}
-        class="inline-block px-7 py-1.5 overflow-hidden text-sm font-semibold transition-transform rounded-full group text text-green-700/70 bg-green-300/30 hover:bg-green-500/70 hover:text-white"
-      >
-        +
-      </button>
+      <div className="flex items-center justify-center mt-4 p-10">
+        <div className="flex flex-col items-center bg-gray-100 p-4 rounded-lg shadow-md">
+          <div class="px-6 py-2 mt-6 bg-blue-500 text-white rounded-lg ">
+            Counter = {counter}
+          </div>
 
-      <button
-        onClick={decrease}
-        class="inline-block px-7 py-1.5 overflow-hidden text-sm font-semibold transition-transform rounded-full group text text-green-700/70 bg-green-300/30 hover:bg-green-500/70 hover:text-white"
-      >
-        -
-      </button>
+          <div className="flex items-center m-6">
+            <button
+              onClick={increase}
+              className="px-6 py-2 bg-green-500 text-white rounded-lg mx-4"
+            >
+              +
+            </button>
+
+            <button
+              onClick={decrease}
+              className="px-6 py-2 bg-red-500 text-white rounded-lg mx-4"
+            >
+              -
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

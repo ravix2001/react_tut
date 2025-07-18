@@ -1,11 +1,77 @@
-import React from 'react'
+import React from "react";
 
 const Form = () => {
   return (
     <div>
+      <section class="flex-grow container mx-auto p-6">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Create a New Blog Post
+        </h1>
 
+        <form
+          action="/addBlog"
+          method="POST"
+          class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md"
+        >
+          <div class="mb-4">
+            <label for="title" class="block text-gray-700 font-semibold mb-2">
+              Title
+            </label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter blog title"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="subtitle"
+              class="block text-gray-700 font-semibold mb-2"
+            >
+              Sub Title
+            </label>
+            <input
+              type="text"
+              id="subtitle"
+              name="subtitle"
+              required
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter blog title"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="description"
+              class="block text-gray-700 font-semibold mb-2"
+            >
+              Description
+            </label>
+            <textarea
+              id="description"
+              name="description"
+              required
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Write your blog content here"
+            ></textarea>
+          </div>
+
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-6 py-2.5 rounded-md font-semibold hover:bg-blue-700 transition"
+            >
+              Publish Post
+            </button>
+          </div>
+        </form>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
