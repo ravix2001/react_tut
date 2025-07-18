@@ -5,10 +5,9 @@ import { useNavigate } from "react-router-dom";
 // import "index.css";
 
 function Home() {
-
   return (
     <>
-      <Navbar />
+      <Navbar add="Add"/>
       <h1 className="text-3xl font-bold ml-14 mt-8 mb-1">Latest Blogs</h1>
       <div className="flex flex-wrap">
         <Card />
