@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-// import "index.css";
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -28,7 +26,7 @@ function Home() {
   console.log("Home component rendered");
   return (
     <>
-      <Navbar add="Add" />
+      <Navbar/>
       <h1 className="text-3xl font-bold ml-14 mt-8 mb-1">Latest Blogs</h1>
       <div className="flex flex-wrap">
         {blogs.map((blog) => (
