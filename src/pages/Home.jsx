@@ -32,13 +32,13 @@ function Home() {
         {blogs.map((blog) => (
           <Card
             key={blog.id}
+            id={blog.id}
             author={blog.author}
             title={blog.title}
             description={blog.description}
             image={blog.image}
           />))
         }
-
       </div>
     </>
   );

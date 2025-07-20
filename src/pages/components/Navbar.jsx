@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar () {
+function Navbar({hideAddButton = false}) {
   return (
     <div>
       <nav className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
@@ -28,14 +28,16 @@ function Navbar () {
             </div>
 
             {/* <!-- Desktop Button --> */}
-            <div className="hidden md:block">
-              <a
-                href="/create"
-                className="bg-white text-indigo-700 px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold"
-              >
-                Add
-              </a>
-            </div>
+            {!hideAddButton && (
+              <div className="addButton hidden md:block">
+                <a
+                  href="/create"
+                  className="bg-white text-indigo-700 px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold"
+                >
+                  Add
+                </a>
+              </div>
+            )}
 
             {/* <!-- Mobile Menu Button --> */}
             <div className="md:hidden">
@@ -76,6 +78,6 @@ function Navbar () {
       </nav>
     </div>
   );
-};
+}
 
 export default Navbar;

@@ -6,6 +6,7 @@ import Create from "./pages/Create";
 import Edit from "./pages/Edit";
 import Contact from "./pages/Contact";
 import LearningUseState from "./pages/LearningUseState";
+import SinglePage from "./pages/SinglePage";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
         <Route path="/learningUseState" element={<LearningUseState/>} />
+        <Route path='/single/:id' element={<SinglePage />} />
       </Routes>
     </BrowserRouter>
   );

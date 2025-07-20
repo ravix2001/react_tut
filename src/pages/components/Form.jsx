@@ -1,6 +1,5 @@
-import React from "react";
+function Form () {
 
-const Form = () => {
   return (
     <div>
       <section class="flex-grow container mx-auto p-6">
@@ -29,10 +28,10 @@ const Form = () => {
 
           <div class="mb-4">
             <label
-              for="subtitle"
+              for="author"
               class="block text-gray-700 font-semibold mb-2"
             >
-              Sub Title
+              Author
             </label>
             <input
               type="text"
@@ -64,6 +63,7 @@ const Form = () => {
             <button
               type="submit"
               class="bg-blue-600 text-white px-6 py-2.5 rounded-md font-semibold hover:bg-blue-700 transition"
+              onClick={addBlog}
             >
               Publish Post
             </button>
