@@ -14,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}/>
+        <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About/>} />
         <Route path='/create' element={<Create />} />
         <Route path='/edit' element={<Edit />} />
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path="/learningUseState" element={<LearningUseState/>} />
         <Route path='/single/:id' element={<SinglePage />} />
+        <Route path="edit/:id" element={<Edit />} />
       </Routes>
     </BrowserRouter>
   );

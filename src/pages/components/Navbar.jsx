@@ -13,16 +13,16 @@ function Navbar({hideAddButton = false}) {
 
             {/* <!-- Desktop Menu --> */}
             <div className="hidden md:flex space-x-6 text-white font-medium">
-              <a href="#" className="hover:text-yellow-300 transition">
+              <a href="/home" className="hover:text-yellow-300 transition">
                 Home
               </a>
-              <a href="#" className="hover:text-yellow-300 transition">
+              <a href="/about" className="hover:text-yellow-300 transition">
                 About
               </a>
-              <a href="#" className="hover:text-yellow-300 transition">
+              <a href="/" className="hover:text-yellow-300 transition">
                 Services
               </a>
-              <a href="#" className="hover:text-yellow-300 transition">
+              <a href="/" className="hover:text-yellow-300 transition">
                 Contact
               </a>
             </div>
@@ -34,7 +34,7 @@ function Navbar({hideAddButton = false}) {
                   href="/create"
                   className="bg-white text-indigo-700 px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold"
                 >
-                  Add
+                  Add Blog
                 </a>
               </div>
             )}

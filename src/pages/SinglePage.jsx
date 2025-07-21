@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SinglePage() {
   const data = useParams();
@@ -61,12 +62,14 @@ function SinglePage() {
         </div>
       </div>
 
-      <div className="flex flex-row justify-center mt-2">
+      <div className="flex flex-row justify-center mt-2" >
+        <Link to={"/edit/" + data.id} className="flex justify-center">
         <button className="flex justify-center ">
           <span className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
             Edit Blog
           </span>
         </button>
+        </Link>
 
         <button className="flex justify-center ml-2" onClick={deleteBlog}>
           <span className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
